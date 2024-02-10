@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # the above line is short-hand for the following: 
     # get "/companies", :controller => "companies", :action => "index"
   resources "contacts"
+  resources "cards"
 end

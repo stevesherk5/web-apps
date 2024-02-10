@@ -1,0 +1,26 @@
+<h1>WELCOME TO HELL</h1>
+
+
+<% suits = ["clubs","diamonds","hearts","spades"]%>
+<% cards = ["ace","2","3","4","5","6","7","8","9","10","jack","queen","king"]%>
+<% deck = [] %>
+<% for card in cards %>
+  <% for suit in suits %>
+    <% new_card = "#{card}_of_#{suit}"%>
+    <% deck.push(new_card) %>
+  <% end %>
+<% end %>
+
+<% shuffled_deck = deck.shuffle %>
+
+<p>
+<img src="/images/cards/<%=shuffled_deck[0]%>.svg">
+<img src="/images/cards/<%=shuffled_deck[1]%>.svg">
+<img src="/images/cards/<%=shuffled_deck[2]%>.svg">
+<img src="/images/cards/<%=shuffled_deck[3]%>.svg">
+<img src="/images/cards/<%=shuffled_deck[4]%>.svg">
+</p>
+
+<p>
+  <a href="/cards">Shuffle Again</a>
+</p>
